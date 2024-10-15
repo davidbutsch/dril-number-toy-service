@@ -12,7 +12,6 @@ import express, { Express } from "express";
 
 import { AppError } from "@/errors";
 import { StatusCodes } from "http-status-codes";
-import { UserController } from "@/modules/user";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import helmet from "helmet";
@@ -49,7 +48,7 @@ securityMiddleware(app);
 standardMiddleware(app);
 
 useExpressServer(app, {
-  controllers: [UserController],
+  controllers: [],
   routePrefix: BASE_PATH,
   defaultErrorHandler: false,
   validation: defaultValidationConfig,

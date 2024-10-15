@@ -9,8 +9,6 @@ export class ENV {
   public LOG_PATH: string | undefined;
   public PORT: string | undefined;
   public CORS_WHITELIST: string | undefined;
-  public MONGODB_URL: string | undefined;
-  public REDIS_URL: string | undefined;
 
   private readonly keys: (keyof ENV)[];
 
@@ -21,8 +19,6 @@ export class ENV {
       "LOG_PATH",
       "PORT",
       "CORS_WHITELIST",
-      "MONGODB_URL",
-      "REDIS_URL",
     ];
 
     this.loadENV();
