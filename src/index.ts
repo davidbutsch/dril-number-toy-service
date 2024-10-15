@@ -1,4 +1,4 @@
-process.title = "microservice-template";
+process.title = "dril-number-toy-service";
 Error.stackTraceLimit = process.env.NODE_ENV === "production" ? -1 : 10;
 
 import { addAlias } from "module-alias";
@@ -12,5 +12,5 @@ import * as libs from "@/libs";
 import { env } from "@/common";
 
 libs.Logger.info(
-  `microservice-template with process id of ${process.pid} starting in ${env.NODE_ENV} mode`
+  `${process.title} with process id of ${process.pid} starting in ${env.NODE_ENV} mode`
 );
